@@ -5,7 +5,7 @@ import {
   resetConsent,
   writeConsent,
   type ConsentState,
-} from "@xtoolkit/analytics";
+} from "../../analytics/src/index";
 import { faqJsonLd, type FaqItem } from "./faq";
 import type { LegalDocument } from "./legal";
 import { isValidEmail, type NewsletterAdapter } from "./newsletter";

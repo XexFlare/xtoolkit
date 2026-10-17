@@ -21,3 +21,34 @@ Develop locally with `npm link`. Once stable, tools install a pinned tag, e.g. `
 `npm install`, then `npm run check` (typecheck and tests).
 
 Configuration lives in environment variables; see `.env.example`.
+
+## Installing in a tool
+
+The kit is a private git dependency pinned to a tag. Import by subpath (the kit ships TypeScript source, so the tool's bundler compiles it):
+
+```json
+"dependencies": { "xtoolkit": "git+https://github.com/XexFlare/xtoolkit.git#v0.2.0" }
+```
+
+```ts
+import { ThemeToggle } from "xtoolkit/ui";
+import "xtoolkit/ui/styles.css";
+import { createTracker } from "xtoolkit/analytics";
+import { handleEventRequest } from "xtoolkit/analytics/server";
+```
+
+Subpaths: `ui`, `ui/styles.css`, `analytics`, `analytics/server`, `utils`, `clients`, `pwa`. Inside the kit, packages import each other by relative path so this works from a plain install.
+
+To release a change: commit, bump `version`, `git tag vX.Y.Z`, push with tags, then bump the tag in each tool and run `npm install`.
+
+### Netlify access to the private repo
+
+Create a fine-grained GitHub token with read-only "Contents" access to `XexFlare/xtoolkit` only. Add three Netlify environment variables (git reads them before `npm install` runs, so the token never enters the repo):
+
+```
+GIT_CONFIG_COUNT=1
+GIT_CONFIG_KEY_0=url.https://<TOKEN>@github.com/.insteadOf
+GIT_CONFIG_VALUE_0=https://github.com/
+```
+
+Locally, your normal GitHub login is used.

@@ -1,8 +1,8 @@
 {
   "name": "xtoolkit",
   "private": true,
-  "version": "0.1.0",
-  "description": "Shared code for the calculatorx tools: UI, utils, analytics, dataset clients, PWA. No data lives here.",
+  "version": "0.2.0",
+  "description": "Shared code for the calculatorx tools: UI, utils, analytics, dataset clients, PWA. No data lives here. Install as a git dependency pinned to a tag.",
   "type": "module",
   "workspaces": [
     "packages/*"
@@ -20,5 +20,19 @@
     "react-dom": "^19.2.7",
     "typescript": "^5.6.0",
     "vitest": "^3.0.0"
+  },
+  "exports": {
+    "./ui": "./packages/ui/src/index.ts",
+    "./ui/styles.css": "./packages/ui/src/styles.css",
+    "./analytics": "./packages/analytics/src/index.ts",
+    "./analytics/server": "./packages/analytics/src/server.ts",
+    "./utils": "./packages/utils/src/index.ts",
+    "./clients": "./packages/clients/src/index.ts",
+    "./pwa": "./packages/pwa/src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19"
   }
 }
