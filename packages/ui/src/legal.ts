@@ -71,7 +71,7 @@ export function privacyPolicy(site: SiteConfig): LegalDocument {
     {
       heading: "Stored in your browser",
       paragraphs: [
-        "The site keeps a few settings in your browser's local storage, such as light or dark mode, your cookie choice and recent results. They stay on your device. Clearing your browser data removes them.",
+        "The site keeps a few settings in your browser's local storage, such as light or dark mode, your cookie choice, recent results and any label details you enter. They stay on your device. Clearing your browser data removes them.",
       ],
     },
     {
