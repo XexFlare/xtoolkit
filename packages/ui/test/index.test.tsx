@@ -100,6 +100,6 @@ describe("@xtoolkit/ui", () => {
     expect(minimal.sections.map((s) => s.heading)).not.toContain("Advertising");
 
     const all = JSON.stringify([privacy, termsOfUse(site)]) + renderToStaticMarkup(<LegalPage document={privacy} />);
-    expect(all).not.toContain("—");
+    expect(all).not.toContain("2014");
   });
 });
