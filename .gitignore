@@ -3,3 +3,6 @@ dist/
 .env
 .env.local
 **/.claude/settings.local.json
+
+# Local-only notes for the AI assistant (this repo is public)
+CLAUDE.md
