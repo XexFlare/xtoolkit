@@ -1,0 +1,9 @@
+{
+  "name": "@xtoolkit/utils",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Units, currency formatting, exchange rates, print/PDF, share-by-link, CSV (built from C03 on).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts"
+}

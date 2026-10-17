@@ -1,0 +1,9 @@
+{
+  "name": "@xtoolkit/analytics",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GA4 loader, Consent Mode v2, standard usage events (built in C04).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts"
+}

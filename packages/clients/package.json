@@ -1,0 +1,9 @@
+{
+  "name": "@xtoolkit/clients",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One API client per dataset and ShipRouteX with live-first fetching, caching, snapshot fallback and client id (built from C15 on).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts"
+}
