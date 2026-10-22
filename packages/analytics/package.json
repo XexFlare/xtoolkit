@@ -2,12 +2,11 @@
   "name": "@xtoolkit/analytics",
   "version": "0.1.0",
   "private": true,
-  "description": "GA4 loader, Consent Mode v2, standard usage events, own usage log client and server logic.",
+  "description": "GA4 loader, Consent Mode v2, standard usage events, own usage log client. The server side lives in the private foundation repo.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./server": "./src/server.ts"
+    ".": "./src/index.ts"
   }
 }
